@@ -1,0 +1,207 @@
+body {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #0d2942;
+    margin: 0;
+    padding: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+  }
+
+  /* Add margin to main content */
+  main {
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    text-align: center;
+    width: 420px;
+    height: auto;
+    margin: -40px auto;
+  }
+
+
+  /* Add space between intro text and downloads section */
+  #downloads {
+    margin-top: 30px; /* Add space above the downloads section */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Style for the download title and version */
+  .download-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-bottom: 0; /* No bottom margin */
+    line-height: 1.2; /* Tighter line height */
+  }
+  
+  .version-info {
+    width: 100%;
+    text-align: center;
+    margin-top: -5px; /* Negative margin to pull it up closer to title */
+    margin-bottom: 15px; /* Space between version and content below */
+    line-height: 1; /* Compact line height */
+  }
+  
+  /* Style for Windows and Linux sections */
+  #windows, #linux {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 48%;
+    padding: 15px;
+    border: 1px solid #cb7f61;
+    border-radius: 5px;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  /* Center the container for Windows download links */
+  #windows {
+    text-align: center; /* Center all content in the Windows section */
+  }
+  
+  /* Keep the notes left-aligned */
+  #windows p {
+    text-align: left;
+  }
+  
+  /* Center the section titles */
+  #windows p:first-child, #linux p:first-child {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+  
+  /* Create a wrapper for the download buttons */
+  #windows div#exe, 
+  #windows div#msi, 
+  #windows div#Setup,
+  #windows div.faux_div_pour_align_avec_menu_linux {
+    display: inline-block;
+    margin: 10px 10px;
+    text-align: center; /* Center the text inside each button */
+  }
+  
+  /* Create a flex container for Windows download links */
+  #windows div#exe, 
+  #windows div#msi, 
+  #windows div#Setup {
+    display: inline-block;
+    margin: 10px 10px;
+  }
+  
+  /* Position download links at the top after the section title */
+  #windows div, #linux div {
+    margin: 10px 0;
+  }
+  
+  /* Style for the download links */
+  #windows div a, #linux div a {
+    display: block;
+    padding: 8px 15px;
+    background-color: #fffcf5;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #cb7f61;
+    min-width: 80px;
+    text-align: center;
+  }
+  
+  #windows div a:hover, #linux div a:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Notes paragraphs should be block elements */
+  #windows p:not(:first-child), #linux p:not(:first-child) {
+    display: block;
+    width: 100%;
+    clear: both;
+    text-align: left;
+  }
+  
+  /* Clear float and set space for the version text */
+  #downloads > span {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Container for Linux download links */
+  #linux {
+    text-align: center; /* Center the links */
+  }
+  
+  /* Style for the first three Linux download links (top row) */
+  #linux div#deb,
+  #linux div#rpm,
+  #linux div#appimage {
+    display: inline-block;
+    margin: 10px 10px;
+  }
+  
+  /* Clear the first row and create a new row for binary */
+  #linux div#bin {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: -5px; /* Bring it a bit closer to the top row */
+    margin-bottom: 15px; /* Space below binary link */
+  }
+  
+  /* Style for Linux download links */
+  #linux div a {
+    display: block;
+    padding: 8px 15px;
+    background-color: #fffcf5;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #cb7f61;
+    min-width: 80px;
+    text-align: center;
+  }
+  
+  #linux div a:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Reset the notes section positioning */
+  #linux p:nth-of-type(2) {
+    margin-top: 0; /* Remove any extra space */
+    clear: both; /* Ensure it starts below all links */
+  }
+
+  /* Add simple spacing before notes sections */
+  #windows p:nth-of-type(2),
+  #linux p:nth-of-type(2) {
+    margin-top: 2em;
+    border-top: 1px solid #cb7f61;
+    padding-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Remove any absolute positioning for notes content */
+  #windows p:nth-of-type(3),
+  #linux p:nth-of-type(3),
+  #linux p:nth-of-type(4),
+  #linux p:nth-of-type(5) {
+    position: static;
+    top: auto;
+  }
