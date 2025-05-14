@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALBERTINE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo" class="logo">
+            <img src="logo.png" alt="Logo Albertine" class="logo">
+    </header>
+     <main>
+        Client de transcription de fichiers audio en texte utilisant l'API audio de l'IA de la DINUM, Albert.
+        <div id="downloads">
+            <div class="download-title">Téléchargements</div>
+            <div class="version-info">version <span id="version">0.5.0</span></div>
+            <div id="windows">
+                <p>Windows 64 bits</p>
+                <div id="exe">
+                    <a href="./windows/exe/albertversion.exe" download="albertine.exe">EXE</a>
+                </div>
+                <div id="msi">
+                    <a href="./windows/msi/albertversion_x64_en-US.msi" download="albertine.msi">MSI</a>
+                </div>
+                <div id="Setup">
+                    <a href="./windows/nsis/albertversion_x64-setup.exe" download="setup.exe">Setup</a>
+                </div> 
+                <div id="bin" class="faux_div_pour_align_avec_menu_linux">
+                      <br><br><br>
+                </div>
+                <p> Notes pour Windows : </p>
+                <p>Vous pouvez soit copier l'exe et le lancer depuis son répertoire, soit installer le programme avec le fichier .msi ou avec l'installateur setup.exe.<br>
+                    Pour Windows 10 et plus.</p>
+            </div>
+            <div id="linux">
+                <p>Linux 64 bits</p>
+                <div id="deb">
+                    <a href="./linux/deb/albertversion_amd64.deb" download="albertine.deb">DEB</a>
+                </div>
+                <div id="rpm">
+                    <a href="./linux/rpm/albertversion-1.x86_64.rpm" download="albertine.rpm">RPM</a>
+                </div>
+                <div id="appimage">
+                    <a href="./linux/appimage/albertversion_amd64.AppImage" download="albertine.AppImage">AppImage</a>
+                </div>
+                <div id="bin">
+                    <a href="./linux/bin/albertine" download="albertine">Binaire</a>
+                </div>
+                <p> Notes pour Linux : </p>
+                <p>Les versions Linux bin, deb ou rpm nécessitent que le moteur de rendu WebKit soit installé sur le système.<br>
+                Comment <a href="https://tauri.app/start/prerequisites/#linux" target="_blank">installer les dépendances</a>.</p>
+                
+                <p>La version AppImage, plus volumineuse, fonctionne telle quelle car elle embarque le moteur de rendu.</p>
+                
+                <p>Parfois Webkit affiche une erreur d'affichage, il faut alors ajouter une variable d'environnement :<br>
+                Erreur affichage Wayland ou Gnome sous Linux<br>
+                <code>env WEBKIT_DISABLE_COMPOSITING_MODE=1 ./albert</code><br>
+                </p>              
+            </div>
+        </div>
+     </main>
+     <script>
+        // Fonction de récupération de la version dans la page HTML
+        function getVersion() {
+            const versionElement = document.getElementById('version');
+            const version = versionElement.textContent;
+            return version;
+        }
+
+
+        // Fonction de mise à jour des liens de téléchargement
+        function updateDownloadLinks() {
+            const version = getVersion();
+            const links = document.querySelectorAll('a[download]');
+            const albert_version = "albertine_" + version;
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                const newHref= href.replace(/albertversion/g, albert_version);
+                link.setAttribute('href', newHref);
+            });
+        }
+        window.onload = function() {
+            updateDownloadLinks();
+        }
+
+     </script>
+
+</body>
