@@ -205,3 +205,23 @@ body {
     position: static;
     top: auto;
   }
+
+  .doc_smartphone {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .smartphone_img {
+    display: block;
+    margin: auto;
+    max-width: 300px;
+    height: auto;
+  }
+  .drive_icon {
+    display: inline-block;
+
+    max-width: 48px;
+    height: auto;
+  }
