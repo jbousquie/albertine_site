@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albertine Smartphone</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../logo.png" alt="Logo Albertine" class="logo">
+        </div>
+        <h1>Depuis un smartphone Android</h1>
+    </header>
+    <article class="doc_smartphone">
+        <h2>Principe</h2>
+        <p></p>Pour l'instant, l'application Albertine n'existe que pour PC et n'est pas une application mobile.<br>
+        Néanmoins, il est possible d'enregistrer une réunion depuis son smartphone et de la transmettre ensuite à Albertine sur PC.</p>
+        <p>La marche à suivre est la suivante : <br>
+        Lors de la réunion à transcrire, vous utilisez simplement une application Magnétophone de votre smartphone et vous enregistrez l'audio au format mp3 ou wav, à paramétrer avant le début de l'enregistrement en général <i>(note : si cela est paramétrable, vous pouvez descendre le taux d'échantillonnage jusqu'à 16 kbps qui est la valeur à laquelle travaille l'IA, ce qui vous produira des fichiers plus légers)</i>.<br>
+        Une fois l'enregistrement terminé, vous devez transférer le fichier audio sur votre PC.<br>
+        Pour cela, vous pouvez utiliser un câble USB pour le transfert direct ou bien utiliser un service de stockage en ligne (Google Drive, Dropbox, etc.) , ou encore le mail si le fichier n'est pas trop volumineux, pour le transfert sans fil dès que vous avez du réseau.<br>
+        Une fois le fichier audio sur votre PC, vous pouvez l'importer dans Albertine et lancer la transcription.<br>
+    
+    <h2>Préconisations</h2>
+    <h3>Application Fossify Voice Recorder</h3>
+    <p>Installez l'application de Magnétophone open source, gratuite et sans publicité, Fossify Voice Recorder depuis le PlayStore Android : <br>
+    <a href="https://play.google.com/store/apps/details?id=org.fossify.voicerecorder" target="_blank">https://play.google.com/store/apps/details?id=org.fossify.voicerecorder</a>
+    </p>
+    <h3>Paramétrage de l'application</h3>
+    <p>La première fois que vous allez utiliser cette application, elle va vous demander de lui autoriser des droits d'accès (à un répertoire de sauvegarde pour le fichier audio, à l'usage du micro, etc) : acceptez initialement toutes ces demandes, ça ne vous sera plus demandé.</p>
+    <br>
+    <p>
+    <b>1.</b> Ouvrez le menu de l'application en cliquant sur les trois petits traits en haut à gauche de l'écran et choisissez <b>"Paramètres"</b> dans le menu déroulant.<br> 
+    <img src="images/voicerecorder.menu.jpg" alt="Paramétrage de l'application Fossify Voice Recorder" class="smartphone_img">
+    </p>
+    <br>
+    <p>
+    <b>2.</b> Dans l'écran des paramètres : <br>
+    <br>&nbsp;&nbsp;<b>a.</b> Choisissez le répertoire de sauvegarde de l'enregistrement audio si celui choisi par défaut ne vous convient pas dans <b>"Sauvegarder les enregistrements dans"</b>.<br>Dans l'exemple ci-dessous, le répertoire du téléphone choisi est <i>Interne/Recordings</i><br>
+    <br>&nbsp;&nbsp;<b>b.</b> Sélectionnez <b>mp3</b> comme format audio dans <b>"Extension"</b>. <br>
+    <br>&nbsp;&nbsp;<b>c.</b> Réduisez le débit pour obtenir un fichier moins volumineux en choisissant <b>"32 kbps</b>" dans <b>"Débit Binaire"</b>. <br>
+    <img src="images/voicerecorder.parametres.jpg" alt="Paramétres audio de l'application Fossify Voice Recorder" class="smartphone_img">
+    Ces réglages ne se font que la première fois, mais vous pouvez les modifier à tout moment si vous le souhaitez.<br>
+    </p>
+    <h3>Enregistrement d'une réunion</h3>
+    <p>
+        Dans l'écran principal de l'application (onglet <b>Enregistreur</b> sur le bandeau du bas), pressez simplement le bouton central représentant un micro et l'enregistrement démarre.<br>
+        Vous pouvez alors mettre l'enregistrement en pause à tout moment en appuyant sur le bouton central et le reprendre en appuyant à nouveau sur ce bouton.<br>
+        Enfin, pour arrêter l'enregistrement, appuyez sur le bouton stop (la coche à droite du bouton central).<br>
+        Si vous appuyez sur la croix à gauche du bouton central, vous annulez et supprimez directement l'enregistrement en cours.<br>
+    <img src="images/voicerecorder.record.jpg" alt="Enregistrement audio avec Fossify Voice Recorder" class="smartphone_img">
+    </p>
+    <h3>Fichiers audio</h3>
+    <p>
+        Dans l'écran des fichiers (onglet <b>Lecteur</b> sur le bandeau du bas), vous voyez la liste de tous les fichiers audio enregistrés par l'application dans le répertoire choisi sur le téléphone.<br>
+    <img src="images/voicerecorder.files.jpg" alt="Fichiers audio de Fossify Voice Recorder" class="smartphone_img">
+    </p>
+    <p>
+        Pour écouter un fichier, il suffit de cliquer dessus.<br>
+        Pour le renommer, cliquez sur le nom du fichier et choisissez <b>"Renommer"</b> dans le menu déroulant.<br>
+    </p>
+    <h3>Transfert vers Albertine</h3>
+    <p>
+        Pour transférer le fichier audio à Albertine sur votre PC, vous pouvez le faire de plusieurs manières :<br>
+        <br>&nbsp;&nbsp;<b>a.</b> En le transférant directement sur votre PC avec un câble USB.<br>
+        <br>&nbsp;&nbsp;<b>c.</b> En l'envoyant par mail si le fichier n'est pas trop volumineux.<br>   
+        <br>&nbsp;&nbsp;<b>c.</b> En le partageant sur un service de stockage en ligne (Google Drive, Drive Entrainer, etc.) pour le récupérer ensuite sur votre PC : <br>
+        cliquez sur les trois petits points à droite du nom du fichier et choisissez <b>"Partager"</b> dans le menu déroulant.<br>
+        Vous pouvez alors choisir le moyen de partage que vous souhaitez utiliser (Google Drive, Drive Entrainer, mail, etc.)<br>
+        La méthode recommandée est d'utiliser le Drive Entrainer de l'IUT à partir de l'application <a href="https://play.google.com/store/search?q=synology+drive+client&c=apps" target="_blank">Synology Drive</a> à installer sur votre smartphone (icône <img src="images/drive_icon.png" class="drive_icon">).<br><br>
+        <img src="images/android.share.jpg" alt="Partage d'un fichier audio depuis Fossify Voice Recorder" class="smartphone_img">
+    </p>
+    </article>
+</body>
+</html>
